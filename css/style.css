@@ -1,0 +1,114 @@
+:root {   --my-padding: 0.4rem; }
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {     
+    color: rgb(104, 104, 104);
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 2fr 0.7fr 0.8fr 0.5fr;
+    grid-template-areas:
+    "con1 con2 con2 con2"
+    "con3 con3 con3 con3"
+    "con4 con4 con5 con5"
+    "con4 con4 con6 con6"
+    "con7 con7 con7 con7"
+}
+
+
+.con1 { 
+    display: grid;
+    align-items: center;
+    background-color: rgb(255, 205, 205);
+    grid-area: con1;
+    padding: var(--my-padding);
+}
+
+.con2 { 
+    display: grid;
+    align-items: center;
+    background-color:rgb(255, 228, 205);
+    grid-area: con2;
+    padding: var(--my-padding);
+}
+
+.con3 { 
+    display: grid;
+    align-items: center;
+    background-color: rgb(255, 252, 205);
+    grid-area: con3;
+    padding: var(--my-padding);
+}
+
+.con4 { 
+    display: grid;
+    align-items: center;
+    background-color: rgb(207, 255, 205);
+    grid-area: con4;
+    padding: var(--my-padding);
+}
+
+.con5 { 
+    display: grid;
+    align-items: center;
+    background-color: rgb(205, 243, 255);
+    grid-area: con5;
+    padding: var(--my-padding);
+}
+
+.con6 { 
+    display: grid;
+    align-items: center;
+    background-color: rgb(210, 205, 255);
+    grid-area: con6;
+    padding: var(--my-padding);
+}
+
+.con7 { 
+    display: grid;
+    align-items: center;
+    background-color: rgb(249, 205, 255);
+    grid-area: con7;
+    padding: var(--my-padding);
+}
+
+@media (max-width: 1024px) { 
+    .container { 
+        grid-template-columns: 1.2fr 2fr 1fr;
+        grid-template-rows: 0.25fr 1.5fr 1.75fr 0.8fr 0.5fr;
+        grid-template-areas: 
+        "con1 con1 con1"
+        "con3 con3 con3"
+        "con2 con4 con4"
+        "con2 con5 con5"
+        "con2 con6 con7"        ;
+    }
+
+.sidebar { display: none;}
+}
+
+@media (max-width: 480px) { 
+    .container { 
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.15fr 0.3fr 0.5fr 0.23fr 0.24fr 0.25fr;
+        grid-template-areas: 
+        "con1"
+        "con2"
+        "con3"
+        "con4"
+        "con7"
+        "con6"
+        "con5"        ;
+    }
+
+}
+
+
+
